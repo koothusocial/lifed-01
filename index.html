@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIFED by Koothu - Marketing Strategy</title>
+    <title>Lifed Marketing Presentation by Koothu</title>
     
     <!-- Google Fonts: Manrope, Nunito, Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,6 +156,14 @@
             content: '-'; position: absolute; left: -1rem; top: 0;
             color: #0db19b; font-weight: 700;
         }
+        
+        /* Infographic Animations */
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+        .animate-fill {
+            animation: fillBar 1.5s ease-out forwards;
+        }
     </style>
 </head>
 <body class="flex h-screen bg-gray-50 overflow-hidden">
@@ -163,13 +171,12 @@
     <!-- LEFT SIDEBAR -->
     <aside id="sidebar" class="w-72 bg-white border-r border-gray-200 flex-shrink-0 flex flex-col h-full z-20 relative transition-transform duration-300 hidden md:flex">
         <!-- Logo Area -->
-        <div class="h-24 flex items-center px-8 border-b border-gray-100 shrink-0">
-            <img class="h-10 w-auto object-contain" src="lifed-koothu-logo.png" alt="LIFED by Koothu Logo" onerror="this.src='https://placehold.co/180x40/ffffff/0db19b?text=LIFED+by+Koothu'">
+        <div class="h-24 flex items-center justify-center px-8 border-b border-gray-200 shrink-0 box-border">
+            <h1 class="text-4xl font-display font-bold text-lifed-teal m-0">Lifed</h1>
         </div>
 
         <!-- Navigation Menu -->
         <nav class="flex-1 overflow-y-auto py-6 px-4 space-y-1.5" id="nav-menu">
-            <div class="px-4 mb-2 text-xs font-display text-gray-400 uppercase tracking-widest mt-2">Document Structure</div>
             
             <a href="#overview" class="menu-item block px-4 py-2.5 rounded-xl text-sm ui-label text-gray-600 hover:bg-gray-50 flex items-center gap-3">
                 <i class="ph ph-rocket-launch menu-icon text-lg shrink-0"></i> Overview & Objectives
@@ -213,25 +220,26 @@
             </a>
         </nav>
 
-        <div class="p-6 border-t border-gray-100 bg-gray-50 mt-auto shrink-0">
-            <button onclick="window.print()" class="w-full bg-white border border-gray-200 hover:border-lifed-teal text-lifed-teal ui-label py-2.5 px-4 rounded-xl transition-colors flex justify-center items-center gap-2 text-sm shadow-sm">
-                <i class="ph-bold ph-download-simple"></i> Export PDF
-            </button>
+        <!-- Koothu External Links -->
+        <div class="p-5 border-t border-gray-100 bg-gray-50 mt-auto shrink-0 space-y-2.5">
+            <a href="https://koothu.co" target="_blank" rel="noopener noreferrer" class="w-full bg-white border border-gray-200 hover:border-lifed-teal hover:text-lifed-teal text-gray-600 ui-label py-2.5 px-4 rounded-xl transition-colors flex justify-center items-center gap-2 text-sm shadow-sm">
+                <i class="ph-bold ph-globe text-lg"></i> koothu.co
+            </a>
+            <a href="https://instagram.com/koothu.co" target="_blank" rel="noopener noreferrer" class="w-full bg-white border border-gray-200 hover:border-lifed-teal hover:text-lifed-teal text-gray-600 ui-label py-2.5 px-4 rounded-xl transition-colors flex justify-center items-center gap-2 text-sm shadow-sm">
+                <i class="ph-bold ph-instagram-logo text-lg"></i> @koothu.co
+            </a>
         </div>
     </aside>
 
     <!-- RIGHT MAIN CONTENT -->
     <main id="content-area" class="flex-1 overflow-y-auto scroll-smooth pb-32">
         
-        <!-- Header Banner (Fixed to match screenshot exactly) -->
-        <header class="bg-white/95 border-b border-gray-200 py-6 px-8 lg:px-16 sticky top-0 z-50 backdrop-blur-md">
-            <div class="max-w-5xl mx-auto flex items-center gap-4 sm:gap-6">
-                <div class="icon-filled w-12 h-12 sm:w-16 sm:h-16 bg-lifed-teal text-white shadow-md shrink-0">
-                    <i class="ph-fill ph-strategy text-2xl sm:text-4xl"></i>
-                </div>
+        <!-- Header Banner -->
+        <header class="bg-white/95 border-b border-gray-200 sticky top-0 z-50 backdrop-blur-md h-24 flex items-center box-border">
+            <div class="max-w-5xl mx-auto px-8 lg:px-16 w-full">
                 <div class="min-w-0">
-                    <h1 class="text-2xl sm:text-3xl text-gray-900 m-0 leading-tight truncate">LIFED by Koothu</h1>
-                    <p class="text-lifed-teal ui-label mt-1 text-sm sm:text-base truncate">Marketing Strategy &bull; 4th July 2026</p>
+                    <h1 class="text-2xl sm:text-3xl text-gray-900 m-0 leading-tight truncate">Marketing Strategy</h1>
+                    <p class="text-lifed-teal ui-label mt-1 text-sm sm:text-base truncate">koothu | 4th July 2026</p>
                 </div>
             </div>
         </header>
@@ -241,7 +249,7 @@
             <!-- OVERVIEW & OBJECTIVES -->
             <section id="overview" class="scroll-mt-32">
                 <p class="font-body text-xl text-gray-600 leading-relaxed mb-10 max-w-4xl">
-                    A phased marketing approach designed to build awareness, establish trust, foster community, and drive measurable conversions for LIFED by Koothu.
+                    A phased marketing approach designed to build awareness, establish trust, foster community, and drive measurable conversions for Lifed.
                 </p>
 
                 <h2 class="text-2xl sm:text-3xl text-gray-900 mb-8 flex items-start gap-3">
@@ -261,7 +269,7 @@
                         <div class="icon-filled w-12 h-12 shadow-sm shrink-0"><span class="num-font text-xl font-bold">2</span></div>
                         <div class="min-w-0">
                             <h3 class="text-lg text-gray-900 mb-2">Build Trust</h3>
-                            <p class="font-body text-sm text-gray-600 break-words">Position LIFED as the most credible wellbeing platform through education, storytelling and expert voices.</p>
+                            <p class="font-body text-sm text-gray-600 break-words">Position Lifed as the most credible wellbeing platform through education, storytelling and expert voices.</p>
                         </div>
                     </div>
                     <div class="card-uniform flex flex-col sm:flex-row gap-4 items-start">
@@ -282,7 +290,7 @@
                         <div class="icon-filled w-12 h-12 shadow-sm shrink-0"><span class="num-font text-xl font-bold">5</span></div>
                         <div class="min-w-0">
                             <h3 class="text-lg text-gray-900 mb-2">Build Community</h3>
-                            <p class="font-body text-sm text-gray-600 break-words max-w-2xl">Create a loyal audience that follows LIFED even before making a booking.</p>
+                            <p class="font-body text-sm text-gray-600 break-words max-w-2xl">Create a loyal audience that follows Lifed even before making a booking.</p>
                         </div>
                     </div>
                 </div>
@@ -296,7 +304,7 @@
                         <span class="break-words">Target Audience</span>
                     </h2>
                     <p class="font-body text-base sm:text-lg text-gray-600 max-w-3xl">
-                        LIFED connects three interconnected audiences, creating a holistic wellbeing ecosystem where individuals discover meaningful experiences, Healthmates grow sustainable practices, and organisations foster healthier communities.
+                        Lifed connects three interconnected audiences, creating a holistic wellbeing ecosystem where individuals discover meaningful experiences, Healthmates grow sustainable practices, and organisations foster healthier communities.
                     </p>
                 </div>
 
@@ -385,7 +393,7 @@
                             <div class="icon-outlined w-12 h-12 sm:w-14 sm:h-14 bg-gray-50 shrink-0"><i class="ph-fill ph-hand-heart text-2xl sm:text-3xl"></i></div>
                             <div class="min-w-0">
                                 <h3 class="text-xl sm:text-2xl text-gray-900 break-words">Healthmates</h3>
-                                <p class="ui-label text-sm text-gray-500 mt-1 break-words">Practitioners, centres and communities offering curated wellbeing programmes through LIFED.</p>
+                                <p class="ui-label text-sm text-gray-500 mt-1 break-words">Practitioners, centres and communities offering curated wellbeing programmes through Lifed.</p>
                             </div>
                         </div>
                         
@@ -500,7 +508,7 @@
 
                     <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8 shadow-sm">
                         <strong class="ui-label text-sm text-gray-500 uppercase tracking-wider block mb-2">Objective</strong>
-                        <p class="font-body text-base sm:text-lg text-gray-800 break-words">Introduce the problem and position LIFED as a new way of thinking about wellbeing.</p>
+                        <p class="font-body text-base sm:text-lg text-gray-800 break-words">Introduce the problem and position Lifed as a new way of thinking about wellbeing.</p>
                     </div>
 
                     <div class="bg-lifed-mint border-l-4 border-lifed-teal rounded-r-2xl p-6 sm:p-8 mb-10 relative overflow-hidden">
@@ -600,7 +608,7 @@
                                 
                                 <div class="card-uniform">
                                     <h5 class="text-lg text-gray-900 mb-2 flex items-start gap-2"><i class="ph-fill ph-linkedin-logo text-lifed-teal mt-1 shrink-0"></i> <span class="break-words">LinkedIn</span></h5>
-                                    <p class="font-body text-xs text-gray-500 mb-6 bg-gray-50 p-2 rounded break-words">Position LIFED as a thought leader in proactive wellbeing while engaging professionals, HR leaders and corporate decision-makers.</p>
+                                    <p class="font-body text-xs text-gray-500 mb-6 bg-gray-50 p-2 rounded break-words">Position Lifed as a thought leader in proactive wellbeing while engaging professionals, HR leaders and corporate decision-makers.</p>
                                     
                                     <div class="space-y-6">
                                         <div>
@@ -663,7 +671,7 @@
                                         <div>
                                             <strong class="ui-label text-gray-800 flex items-start gap-2 mb-3"><i class="ph-fill ph-microphone-stage text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Founder Talks</span></strong>
                                             <ul class="list-dash-1">
-                                                <li>Vision behind LIFED</li>
+                                                <li>Vision behind Lifed</li>
                                                 <li>Future of wellbeing</li>
                                                 <li>Industry observations</li>
                                                 <li>Founder stories</li>
@@ -695,7 +703,7 @@
                                 
                                 <div class="card-uniform">
                                     <h5 class="text-lg text-gray-900 mb-2 flex items-start gap-2"><i class="ph-fill ph-browser text-lifed-teal mt-1 shrink-0"></i> <span class="break-words">Website & Blog</span></h5>
-                                    <p class="font-body text-xs text-gray-500 mb-6 bg-gray-50 p-2 rounded break-words">Establish LIFED as a trusted source for wellbeing education while improving organic discoverability.</p>
+                                    <p class="font-body text-xs text-gray-500 mb-6 bg-gray-50 p-2 rounded break-words">Establish Lifed as a trusted source for wellbeing education while improving organic discoverability.</p>
                                     
                                     <div class="space-y-6">
                                         <div>
@@ -741,7 +749,7 @@
                                         <span class="text-sm font-semibold text-gray-800 block mb-1">Reddit</span>
                                         <ul class="list-dash-1">
                                             <li>Educational discussions</li>
-                                            <li>AMA sessions</li>
+                                            <li>AMAs</li>
                                             <li>Wellbeing conversations</li>
                                         </ul>
                                     </div>
@@ -869,15 +877,46 @@
                             </div>
                         </div>
                         
-                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start sm:items-center gap-4 flex-col sm:flex-row mt-8">
-                            <strong class="ui-label text-gray-900 flex items-center gap-2 shrink-0"><i class="ph-fill ph-chart-bar text-lifed-teal"></i> Phase 1 Metrics:</strong>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-users text-lifed-teal"></i> Brand Reach</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-eye text-lifed-teal"></i> Impressions</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-video text-lifed-teal"></i> Video Views</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-cursor-click text-lifed-teal"></i> Website Traffic</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-chat-circle-text text-lifed-teal"></i> Organic Engagement</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-newspaper text-lifed-teal"></i> PR Mentions</span>
+                        <!-- Phase 1 Infographic Dashboard -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mt-10">
+                            <h4 class="text-xl text-gray-900 mb-6 flex items-center gap-2"><i class="ph-fill ph-chart-polar text-lifed-teal"></i> Target Awareness Metrics</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-users text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Brand Reach</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-eye text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Impressions</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-video text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Video Views</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-cursor-click text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Website Traffic</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-chat-circle-text text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Engagement</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-newspaper text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">PR Mentions</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -895,14 +934,14 @@
 
                     <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 mb-8 shadow-sm">
                         <strong class="ui-label text-sm text-gray-500 uppercase tracking-wider block mb-2">Objective</strong>
-                        <p class="font-body text-base sm:text-lg text-gray-800 break-words">Help audiences understand holistic wellbeing while introducing the LIFED ecosystem in a simple and approachable way. Build trust by educating users on how LIFED works and how it supports their long-term wellbeing journey.</p>
+                        <p class="font-body text-base sm:text-lg text-gray-800 break-words">Help audiences understand holistic wellbeing while introducing the Lifed ecosystem in a simple and approachable way. Build trust by educating users on how Lifed works and how it supports their long-term wellbeing journey.</p>
                     </div>
 
                     <div class="bg-lifed-mint border-l-4 border-lifed-teal rounded-r-2xl p-6 sm:p-8 mb-10 relative overflow-hidden">
                         <i class="ph-fill ph-quotes text-5xl sm:text-6xl text-lifed-teal opacity-10 absolute top-4 right-4"></i>
                         <strong class="ui-label text-xs text-lifed-teal uppercase tracking-widest mb-3 block">Core Message</strong>
                         <p class="font-display text-xl sm:text-2xl text-gray-900 italic leading-snug relative z-10 break-words">
-                            "Wellbeing is interconnected. LIFED helps people understand themselves, discover the right experiences, and build a personalised path towards better wellbeing."
+                            "Wellbeing is interconnected. Lifed helps people understand themselves, discover the right experiences, and build a personalised path towards better wellbeing."
                         </p>
                     </div>
 
@@ -911,11 +950,11 @@
                             <h4 class="text-xl text-gray-900 mb-5 flex items-start gap-2"><i class="ph-fill ph-lightbulb text-lifed-teal mt-1 shrink-0"></i> <span class="break-words">Topics</span></h4>
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                                 <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 min-w-0">
-                                    <h5 class="text-base text-gray-900 mb-4 border-b border-gray-200 pb-2 break-words">Understanding LIFED</h5>
+                                    <h5 class="text-base text-gray-900 mb-4 border-b border-gray-200 pb-2 break-words">Understanding Lifed</h5>
                                     <ul class="list-dash-1">
-                                        <li>What is LIFED?</li>
-                                        <li>The LIFED vision</li>
-                                        <li>How LIFED works</li>
+                                        <li>What is Lifed?</li>
+                                        <li>The Lifed vision</li>
+                                        <li>How Lifed works</li>
                                         <li>Why curated wellbeing matters</li>
                                     </ul>
                                 </div>
@@ -961,7 +1000,7 @@
                                         <div>
                                             <strong class="ui-label text-gray-800 flex items-start gap-2 mb-3"><i class="ph-fill ph-video-camera text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Explainer Reels</span></strong>
                                             <ul class="list-dash-1">
-                                                <li>How LIFED works</li>
+                                                <li>How Lifed works</li>
                                                 <li>User journey walkthroughs</li>
                                                 <li>Programme discovery</li>
                                                 <li>LEWIS assessment</li>
@@ -1159,7 +1198,8 @@
                                         <span class="text-sm font-semibold text-gray-800 block mb-1">Other Campaigns</span>
                                         <ul class="list-dash-1">
                                             <li>Programme Recommendations</li>
-                                            <li>Wellbeing Tips (Daily habits, Sleep, Mindfulness)</li>
+                                            <li>Daily Wellbeing Tips</li>
+                                            <li>Sleep & Mindfulness Guidance</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1171,7 +1211,7 @@
                                         <span class="text-sm font-semibold text-gray-800 block mb-1">Reddit</span>
                                         <ul class="list-dash-1">
                                             <li>Educational discussions</li>
-                                            <li>AMAs</li>
+                                            <li>AskMeAnything sessions</li>
                                             <li>Product feedback</li>
                                         </ul>
                                     </div>
@@ -1193,10 +1233,10 @@
                                 </div>
                             </div>
                             <div class="bg-white border border-gray-200 p-5 rounded-xl shadow-sm min-w-0">
-                                <strong class="ui-label text-gray-900 flex items-start gap-2 mb-4 border-b border-gray-100 pb-2"><i class="ph-fill ph-video-camera text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Webinars & Live Learning</span></strong>
+                                <strong class="ui-label text-gray-900 flex items-start gap-2 mb-4 border-b border-gray-100 pb-2"><i class="ph-fill ph-video-camera text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Live Learning</span></strong>
                                 <div class="space-y-4">
                                     <div>
-                                        <span class="text-sm font-semibold text-gray-800 block mb-1">Interactive Webinar Series</span>
+                                        <span class="text-sm font-semibold text-gray-800 block mb-1">Interactive Webinars</span>
                                         <ul class="list-dash-1">
                                             <li>Platform walkthroughs</li>
                                             <li>Expert sessions</li>
@@ -1212,14 +1252,14 @@
                                     <div>
                                         <span class="text-sm font-semibold text-gray-800 block mb-1">Other Formats</span>
                                         <ul class="list-dash-1">
-                                            <li>Ask Me Anything (AMA) with Founders</li>
+                                            <li>Ask Me Anything (AMA)</li>
                                             <li>Expert Panel Discussions</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="bg-white border border-gray-200 p-5 rounded-xl shadow-sm min-w-0">
-                                <strong class="ui-label text-gray-900 flex items-start gap-2 mb-4 border-b border-gray-100 pb-2"><i class="ph-fill ph-files text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Educational Resources</span></strong>
+                                <strong class="ui-label text-gray-900 flex items-start gap-2 mb-4 border-b border-gray-100 pb-2"><i class="ph-fill ph-files text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Resources</span></strong>
                                 <div class="space-y-4">
                                     <div>
                                         <span class="text-sm font-semibold text-gray-800 block mb-1">Downloadable Guides</span>
@@ -1246,14 +1286,40 @@
                             </div>
                         </div>
 
-                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start sm:items-center gap-4 flex-col sm:flex-row mt-8">
-                            <strong class="ui-label text-gray-900 flex items-center gap-2 shrink-0"><i class="ph-fill ph-chart-bar text-lifed-teal"></i> Phase 2 Metrics:</strong>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-bookmark-simple text-lifed-teal"></i> Content Saves</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-share-network text-lifed-teal"></i> Shares</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-hourglass text-lifed-teal"></i> Website Session Duration</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-envelope-open text-lifed-teal"></i> Newsletter Sign-ups</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-users text-lifed-teal"></i> Organic Follower Growth</span>
+                        <!-- Phase 2 Infographic Dashboard -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mt-10">
+                            <h4 class="text-xl text-gray-900 mb-6 flex items-center gap-2"><i class="ph-fill ph-chart-polar text-lifed-teal"></i> Target Education Metrics</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-bookmark-simple text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Content Saves</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-share-network text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Shares</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-hourglass text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Session Duration</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-envelope-open text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Newsletter Sign-ups</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-users text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Follower Growth</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1487,15 +1553,46 @@
                             </div>
                         </div>
 
-                        <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm flex items-start sm:items-center gap-4 flex-col sm:flex-row mt-8">
-                            <strong class="ui-label text-gray-900 flex items-center gap-2 shrink-0"><i class="ph-fill ph-chart-bar text-lifed-teal"></i> Phase 3 Metrics:</strong>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-users text-lifed-teal"></i> Community Growth</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-hand-pointing text-lifed-teal"></i> Engagement Rate</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-arrows-clockwise text-lifed-teal"></i> Repeat Visitors</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-envelope-open text-lifed-teal"></i> Newsletter Open Rate</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-ticket text-lifed-teal"></i> Event Participation</span>
-                                <span class="bg-gray-50 border border-gray-200 text-gray-700 text-xs px-3 py-1.5 rounded-full font-ui flex items-center gap-1.5"><i class="ph-fill ph-camera text-lifed-teal"></i> User Generated Content</span>
+                        <!-- Phase 3 Infographic Dashboard -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mt-10">
+                            <h4 class="text-xl text-gray-900 mb-6 flex items-center gap-2"><i class="ph-fill ph-chart-polar text-lifed-teal"></i> Target Community Metrics</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-users text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Community Growth</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-hand-pointing text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Engagement Rate</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-arrows-clockwise text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Repeat Visitors</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-envelope-open text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Newsletter Opens</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-ticket text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">Event Participation</span>
+                                </div>
+                                <div class="bg-gray-50 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group hover:bg-lifed-mint transition-colors border border-gray-100">
+                                    <div class="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-lifed-teal mb-3 relative z-10 group-hover:scale-110 transition-transform">
+                                        <i class="ph-bold ph-camera text-lg"></i>
+                                    </div>
+                                    <span class="font-ui text-sm text-gray-800 relative z-10">UGC Shares</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1520,7 +1617,7 @@
                         <i class="ph-fill ph-quotes text-5xl sm:text-6xl text-lifed-teal opacity-10 absolute top-4 right-4"></i>
                         <strong class="ui-label text-xs text-lifed-teal uppercase tracking-widest mb-3 block">Core Message (Seeker)</strong>
                         <p class="font-display text-xl sm:text-2xl text-gray-900 italic leading-snug relative z-10 break-words">
-                            "Your wellbeing journey begins here. Discover the right programme today and build a healthier tomorrow with personalised guidance from LIFED."
+                            "Your wellbeing journey begins here. Discover the right programme today and build a healthier tomorrow with personalised guidance from Lifed."
                         </p>
                     </div>
 
@@ -1531,7 +1628,7 @@
                                 <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 min-w-0">
                                     <h5 class="text-base text-gray-900 mb-4 border-b border-gray-200 pb-2 flex items-start gap-2"><i class="ph-fill ph-user-focus text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">Wellbeing Seekers</span></h5>
                                     <ul class="list-dash-1">
-                                        <li>Register on the LIFED App & Website</li>
+                                        <li>Register on the Lifed App & Website</li>
                                         <li>Complete the LEWIS Wellbeing Assessment</li>
                                         <li>Receive a personalised Wellbeing Insight Report</li>
                                         <li>Discover AI-powered programme recommendations</li>
@@ -1539,7 +1636,7 @@
                                         <li>Follow a personalised wellbeing roadmap with suggested next-step programmes</li>
                                         <li>Develop consistent wellbeing habits through Small Habits</li>
                                         <li>Return for future programmes based on their wellbeing progress</li>
-                                        <li>Become active members of the LIFED ecosystem</li>
+                                        <li>Become active members of the Lifed ecosystem</li>
                                     </ul>
                                 </div>
                                 <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 min-w-0">
@@ -1561,7 +1658,7 @@
                                         <li>Launch employee wellbeing programmes</li>
                                         <li>Develop long-term corporate partnerships</li>
                                         <li>Implement organisation-wide wellbeing initiatives</li>
-                                        <li>Measure employee wellbeing outcomes through the LIFED ecosystem</li>
+                                        <li>Measure employee wellbeing outcomes through the Lifed ecosystem</li>
                                     </ul>
                                 </div>
                             </div>
@@ -1617,7 +1714,7 @@
                                         </div>
                                         <div>
                                             <strong class="ui-label text-gray-800 flex items-start gap-2 mb-3"><i class="ph-fill ph-linkedin-logo text-lifed-teal mt-0.5 shrink-0"></i> <span class="break-words">LinkedIn Ads</span></strong>
-                                            <p class="text-xs text-gray-500 mb-2">Generate qualified B2B leads and position LIFED as a corporate wellbeing partner.</p>
+                                            <p class="text-xs text-gray-500 mb-2">Generate qualified B2B leads and position Lifed as a corporate wellbeing partner.</p>
                                             <ul class="list-dash-1">
                                                 <li>Corporate Wellbeing Campaigns</li>
                                                 <li>HR Decision Maker Campaigns</li>
@@ -1734,39 +1831,44 @@
                             </div>
                         </div>
 
-                        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-                            <h4 class="text-lg text-gray-900 mb-6 flex items-start gap-2 border-b border-gray-100 pb-3"><i class="ph-fill ph-chart-line-up text-lifed-teal text-xl mt-0.5 shrink-0"></i> <span class="break-words">Phase 4 Success Metrics</span></h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 font-ui text-sm text-gray-700">
-                                <div class="min-w-0">
-                                    <strong class="text-lifed-teal flex items-start gap-2 mb-3"><i class="ph-fill ph-users mt-0.5 shrink-0"></i> <span class="break-words">User Growth</span></strong>
-                                    <ul class="list-dash-1 text-xs text-gray-600 font-body">
-                                        <li>App Downloads</li>
-                                        <li>User Registrations</li>
-                                        <li>LEWIS Assessment Completions</li>
-                                        <li>Active Monthly Users (MAU)</li>
+                        <!-- Phase 4 Infographic Dashboard -->
+                        <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm mt-10">
+                            <h4 class="text-xl text-gray-900 mb-6 flex items-start gap-2 border-b border-gray-100 pb-4"><i class="ph-fill ph-chart-line-up text-lifed-teal text-2xl mt-0.5 shrink-0"></i> <span class="break-words">Phase 4 Success Metrics Dashboard</span></h4>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                
+                                <div class="bg-gradient-to-b from-teal-50 to-white border border-teal-100 rounded-xl p-5 relative overflow-hidden">
+                                    <div class="absolute -right-6 -top-6 text-teal-100 opacity-50"><i class="ph-fill ph-users text-8xl"></i></div>
+                                    <strong class="text-lifed-teal flex items-center gap-2 mb-5 text-lg relative z-10"><i class="ph-bold ph-users shrink-0"></i> User Growth</strong>
+                                    <ul class="space-y-3 relative z-10">
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-download-simple"></i></div><span class="text-sm font-ui text-gray-700">App Downloads</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-user-plus"></i></div><span class="text-sm font-ui text-gray-700">User Registrations</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-check-circle"></i></div><span class="text-sm font-ui text-gray-700">LEWIS Completions</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-users-three"></i></div><span class="text-sm font-ui text-gray-700">Active Monthly Users</span></li>
                                     </ul>
                                 </div>
-                                <div class="min-w-0">
-                                    <strong class="text-lifed-teal flex items-start gap-2 mb-3"><i class="ph-fill ph-trend-up mt-0.5 shrink-0"></i> <span class="break-words">Business Growth</span></strong>
-                                    <ul class="list-dash-1 text-xs text-gray-600 font-body">
-                                        <li>Programme Bookings</li>
-                                        <li>Repeat Programme Bookings</li>
-                                        <li>Healthmate Registrations</li>
-                                        <li>Corporate Leads</li>
-                                        <li>Partnership Conversions</li>
+                                
+                                <div class="bg-gradient-to-b from-teal-50 to-white border border-teal-100 rounded-xl p-5 relative overflow-hidden">
+                                    <div class="absolute -right-6 -top-6 text-teal-100 opacity-50"><i class="ph-fill ph-trend-up text-8xl"></i></div>
+                                    <strong class="text-lifed-teal flex items-center gap-2 mb-5 text-lg relative z-10"><i class="ph-bold ph-trend-up shrink-0"></i> Business Growth</strong>
+                                    <ul class="space-y-3 relative z-10">
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-calendar-check"></i></div><span class="text-sm font-ui text-gray-700">Programme Bookings</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-arrows-clockwise"></i></div><span class="text-sm font-ui text-gray-700">Repeat Bookings</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-hand-heart"></i></div><span class="text-sm font-ui text-gray-700">Healthmate Growth</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-handshake"></i></div><span class="text-sm font-ui text-gray-700">Partner Conversions</span></li>
                                     </ul>
                                 </div>
-                                <div class="min-w-0">
-                                    <strong class="text-lifed-teal flex items-start gap-2 mb-3"><i class="ph-fill ph-currency-circle-dollar mt-0.5 shrink-0"></i> <span class="break-words">Marketing Performance</span></strong>
-                                    <ul class="list-dash-1 text-xs text-gray-600 font-body">
-                                        <li>Conversion Rate</li>
-                                        <li>Cost per Acquisition (CPA)</li>
-                                        <li>Return on Ad Spend (ROAS)</li>
-                                        <li>Customer Lifetime Value (LTV)</li>
-                                        <li>Email Open & Click-through Rates</li>
-                                        <li>Referral Conversion Rate</li>
+                                
+                                <div class="bg-gradient-to-b from-teal-50 to-white border border-teal-100 rounded-xl p-5 relative overflow-hidden">
+                                    <div class="absolute -right-6 -top-6 text-teal-100 opacity-50"><i class="ph-fill ph-currency-circle-dollar text-8xl"></i></div>
+                                    <strong class="text-lifed-teal flex items-center gap-2 mb-5 text-lg relative z-10"><i class="ph-bold ph-currency-circle-dollar shrink-0"></i> Marketing ROI</strong>
+                                    <ul class="space-y-3 relative z-10">
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-percent"></i></div><span class="text-sm font-ui text-gray-700">Conversion Rate</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-chart-line-up"></i></div><span class="text-sm font-ui text-gray-700">CPA & ROAS</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-heart"></i></div><span class="text-sm font-ui text-gray-700">Customer LTV</span></li>
+                                        <li class="flex items-center gap-3 bg-white p-2.5 rounded-lg border border-teal-50 shadow-sm"><div class="w-8 h-8 rounded bg-teal-50 text-lifed-teal flex items-center justify-center shrink-0"><i class="ph-bold ph-envelope-open"></i></div><span class="text-sm font-ui text-gray-700">Email & Referral Opt</span></li>
                                     </ul>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -1781,68 +1883,99 @@
                     <span class="break-words">Other Important Things to Do!</span>
                 </h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
                     <div class="card-uniform bg-white min-w-0">
                         <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-palette text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Brand Asset Development</span></strong>
                         <p class="font-body text-sm text-gray-600 mb-4 break-words">Maintain a consistent and premium brand presence across every customer touchpoint.</p>
-                        <ul class="flex flex-wrap gap-2">
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Campaign Identity Systems</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Brand Photography</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Brand Films</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Motion Graphics</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Sales Collateral</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Event Branding</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Corporate Presentations</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Digital Marketing Assets</li>
-                        </ul>
+                        <div class="space-y-4">
+                            <div>
+                                <ul class="list-dash-1">
+                                    <li>Campaign Identity Systems</li>
+                                    <li>Brand Photography</li>
+                                    <li>Brand Films</li>
+                                    <li>Motion Graphics</li>
+                                    <li>Sales Collateral</li>
+                                    <li>Event Branding</li>
+                                    <li>Corporate Presentations</li>
+                                    <li>Digital Marketing Assets</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-uniform bg-white min-w-0">
                         <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-handshake text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Strategic Partnerships</span></strong>
-                        <p class="font-body text-sm text-gray-600 mb-4 break-words">Expand LIFED's reach by collaborating with organisations that share a common vision of proactive wellbeing.</p>
-                        <ul class="flex flex-wrap gap-2">
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Hospitals</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Wellness Centres</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Resorts</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Educational Institutions</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Corporate Organisations</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Fitness Brands</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Travel Partners</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Insurance Providers</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Healthcare Startups</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">NGOs</li>
-                            <li class="bg-teal-50 border border-teal-200 text-teal-700 text-xs px-2.5 py-1 rounded-md shadow-sm w-full mt-2">Activities: Co-branded campaigns, Partnership events, Referral collaborations, Exclusive wellbeing programmes, Cross-promotional campaigns</li>
-                        </ul>
+                        <p class="font-body text-sm text-gray-600 mb-4 break-words">Expand Lifed's reach by collaborating with aligned organisations.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-sm font-semibold text-gray-800 block mb-1">Partners</span>
+                                <ul class="list-dash-1">
+                                    <li>Hospitals & Healthcare Startups</li>
+                                    <li>Wellness Centres & Resorts</li>
+                                    <li>Educational Institutions</li>
+                                    <li>Corporate Organisations</li>
+                                    <li>Fitness & Travel Brands</li>
+                                    <li>Insurance Providers</li>
+                                    <li>NGOs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-sm font-semibold text-gray-800 block mb-1">Activities</span>
+                                <ul class="list-dash-1">
+                                    <li>Co-branded campaigns</li>
+                                    <li>Partnership events</li>
+                                    <li>Referral collaborations</li>
+                                    <li>Exclusive wellbeing programmes</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-uniform bg-white min-w-0">
-                        <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-magnifying-glass-plus text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Market Research & Optimisation</span></strong>
+                        <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-magnifying-glass-plus text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Market Research & Opt.</span></strong>
                         <p class="font-body text-sm text-gray-600 mb-4 break-words">Continuously improve marketing performance through user research and market analysis.</p>
-                        <ul class="flex flex-wrap gap-2">
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Competitor Analysis</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Audience Research</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">User Feedback Collection</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Customer Interviews</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Campaign Performance Reviews</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Trend Analysis</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Quarterly Strategy Reviews</li>
-                        </ul>
+                        <div class="space-y-4">
+                            <div>
+                                <ul class="list-dash-1">
+                                    <li>Competitor Analysis</li>
+                                    <li>Audience Research</li>
+                                    <li>User Feedback Collection</li>
+                                    <li>Customer Interviews</li>
+                                    <li>Campaign Performance Reviews</li>
+                                    <li>Trend Analysis</li>
+                                    <li>Quarterly Strategy Reviews</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-uniform bg-white min-w-0">
-                        <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-star text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Referral & Reputation Management</span></strong>
-                        <p class="font-body text-sm text-gray-600 mb-4 break-words">Turn satisfied users into brand advocates and build long-term trust through authentic social proof.</p>
-                        <ul class="flex flex-wrap gap-2">
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">User Referrals</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Healthmate Referrals</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Corporate Referrals</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Student Ambassadors</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Community Ambassadors</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Creator Partnerships</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Review Management</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Video Testimonials</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Success Stories</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Case Studies</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Google Business Profile Optimisation</li>
-                            <li class="bg-gray-50 border border-gray-200 text-gray-600 text-xs px-2.5 py-1 rounded-md shadow-sm">Customer Feedback Collection</li>
-                        </ul>
+                        <strong class="ui-label text-lg text-gray-900 flex items-start gap-2 mb-3"><i class="ph-fill ph-star text-lifed-teal shrink-0 mt-1"></i> <span class="break-words">Reputation & Referrals</span></strong>
+                        <p class="font-body text-sm text-gray-600 mb-4 break-words">Turn users into advocates and build authentic social proof for long-term trust.</p>
+                        <div class="space-y-4">
+                            <div>
+                                <span class="text-sm font-semibold text-gray-800 block mb-1">Ambassador Programmes</span>
+                                <ul class="list-dash-1">
+                                    <li>Student Ambassadors</li>
+                                    <li>Community Ambassadors</li>
+                                    <li>Creator Partnerships</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-sm font-semibold text-gray-800 block mb-1">Referral Networks</span>
+                                <ul class="list-dash-1">
+                                    <li>User Referrals</li>
+                                    <li>Healthmate Referrals</li>
+                                    <li>Corporate Referrals</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <span class="text-sm font-semibold text-gray-800 block mb-1">Reputation Management</span>
+                                <ul class="list-dash-1">
+                                    <li>Review Management & Feedback</li>
+                                    <li>Video Testimonials & Success Stories</li>
+                                    <li>Case Studies</li>
+                                    <li>Google Business Profile Optimisation</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -1861,7 +1994,7 @@
                         <span class="break-words">Customer Journey</span>
                     </h2>
                     <p class="font-body text-base sm:text-lg text-gray-600 max-w-3xl">
-                        LIFED's marketing is designed to guide users through a continuous wellbeing journey rather than a one-time programme booking. Every touchpoint encourages deeper engagement, helping users build long-term wellbeing habits while connecting them with the right experiences.
+                        Lifed's marketing is designed to guide users through a continuous wellbeing journey rather than a one-time programme booking. Every touchpoint encourages deeper engagement.
                     </p>
                 </div>
 
@@ -1871,18 +2004,15 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">1</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 1 – Discover LIFED</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users discover LIFED through digital marketing, community engagement, partnerships, PR, referrals, and real-world experiences.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 1 – Discover</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users discover Lifed through digital marketing, PR, and real-world experiences.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Social Media</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Google Search</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Social</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Search</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">YouTube</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">PR</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Influencers</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Community Marketing</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Corporate Activations</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Events</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Referrals</li>
                             </ul>
                         </div>
                     </div>
@@ -1890,15 +2020,13 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">2</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 2 – Understand Holistic Wellbeing</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users begin understanding the importance of holistic wellbeing and how LIFED offers a different approach through curated, real-world experiences.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 2 – Understand</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users understand holistic wellbeing and Lifed's curated approach.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Educational Content</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Website</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Web</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Blog</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Webinars</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Podcasts</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Community Discussions</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Founder Content</li>
                             </ul>
                         </div>
@@ -1907,13 +2035,12 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">3</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 3 – Register on LIFED</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users register on the LIFED platform and create their wellbeing profile to begin a personalised journey.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 3 – Join</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users register and create their wellbeing profile to begin a personalised journey.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">LIFED App</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Website</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Registration Journey</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Onboarding Experience</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Lifed App</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Web Registration</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Onboarding</li>
                             </ul>
                         </div>
                     </div>
@@ -1922,11 +2049,11 @@
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">4</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
                             <h3 class="text-lg text-gray-900 mb-2">Stage 4 – Discover Yourself</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users complete the LEWIS Wellbeing Assessment, gaining a deeper understanding of their current wellbeing across multiple dimensions.</p>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users complete the LEWIS Assessment for deep wellbeing insights.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Wellbeing Assessment</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Personalised Insight Report</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Wellbeing Profile</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">LEWIS Assessment</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Insight Report</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Profile</li>
                             </ul>
                         </div>
                     </div>
@@ -1934,12 +2061,11 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">5</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 5 – Personalised Guidance</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Based on the assessment, LIFED recommends programmes best suited to the user's current wellbeing needs and future goals.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 5 – Guidance</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Lifed recommends programmes suited to user needs and goals.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">AI-powered Programme Recommendations</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Personalised Wellbeing Roadmap</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Curated Programme Suggestions</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">AI Recommendations</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Personalised Roadmap</li>
                             </ul>
                         </div>
                     </div>
@@ -1947,14 +2073,13 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">6</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 6 – Experience a Programme</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users participate in curated residential or session-based wellbeing programmes delivered by trusted Healthmates.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 6 – Experience</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users participate in curated programmes by trusted Healthmates.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Programme Booking</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Healthmate Experience</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Booking</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Workshops</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Retreats</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Community Sessions</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Sessions</li>
                             </ul>
                         </div>
                     </div>
@@ -1962,12 +2087,11 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">7</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 7 – Build Healthy Habits</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Following the programme, users receive updated insights, personalised recommendations, and ongoing support to maintain momentum.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 7 – Continue</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users receive updated insights and support to maintain momentum.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Updated Wellbeing Insights</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Updated Insights</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Small Habits</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Future Programme Recommendations</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Progress Tracking</li>
                             </ul>
                         </div>
@@ -1976,15 +2100,13 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8 pl-12 md:pl-0">
                         <div class="icon-outlined w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-white"><span class="num-font font-bold">8</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform min-w-0">
-                            <h3 class="text-lg text-gray-900 mb-2">Stage 8 – Belong to the Community</h3>
-                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users become active members of the LIFED ecosystem by participating in community initiatives and engaging with ongoing wellbeing content.</p>
+                            <h3 class="text-lg text-gray-900 mb-2">Stage 8 – Belong</h3>
+                            <p class="font-body text-sm text-gray-600 mb-4 break-words">Users become active members of the Lifed ecosystem.</p>
                             <ul class="flex flex-wrap gap-2">
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Community Challenges</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Newsletters</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Podcasts</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Challenges</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Events</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Live Sessions</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Online Communities</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Online Hubs</li>
                             </ul>
                         </div>
                     </div>
@@ -1992,14 +2114,13 @@
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between md:justify-normal md:odd:flex-row-reverse group pl-12 md:pl-0">
                         <div class="icon-filled w-10 h-10 shrink-0 absolute left-0 md:relative md:left-auto md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 bg-lifed-teal text-white border-2 border-white"><span class="num-font font-bold">9</span></div>
                         <div class="w-full md:w-[calc(50%-2.5rem)] card-uniform border-2 border-lifed-teal min-w-0">
-                            <h3 class="text-lg text-lifed-teal mb-2">Stage 9 – Become a Brand Advocate</h3>
-                            <p class="font-body text-sm text-gray-700 mb-4 break-words">Satisfied users become advocates who share their experiences, refer others, and strengthen the LIFED community.</p>
+                            <h3 class="text-lg text-lifed-teal mb-2">Stage 9 – Advocate</h3>
+                            <p class="font-body text-sm text-gray-700 mb-4 break-words">Satisfied users become advocates who share experiences and refer others.</p>
                             <ul class="flex flex-wrap gap-2">
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Testimonials</li>
                                 <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Referrals</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">User-generated Content</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Community Ambassadors</li>
-                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Healthmate Recommendations</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">UGC</li>
+                                <li class="bg-gray-50 border border-gray-100 text-gray-500 text-xs px-2 py-1 rounded">Ambassadors</li>
                             </ul>
                         </div>
                     </div>
@@ -2014,7 +2135,7 @@
                         <div class="icon-filled w-10 h-10 sm:w-12 sm:h-12 shrink-0 mt-0.5"><i class="ph-fill ph-map-trifold text-xl sm:text-2xl"></i></div>
                         <span class="break-words">Marketing Roadmap & Ops</span>
                     </h2>
-                    <p class="font-body text-base sm:text-lg text-gray-600 max-w-2xl break-words">A strategic roadmap outlining the progressive development of LIFED's marketing ecosystem, from establishing a market presence to building a scalable, data-driven growth engine.</p>
+                    <p class="font-body text-base sm:text-lg text-gray-600 max-w-2xl break-words">A strategic roadmap outlining the progressive development of Lifed's marketing ecosystem.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
@@ -2022,27 +2143,26 @@
                         <div class="absolute top-0 right-0 bg-lifed-mint text-lifed-teal text-xs ui-label px-3 py-1 rounded-bl-xl border-l border-b border-teal-100">Months 1–2</div>
                         <h3 class="text-xl text-gray-900 mb-4 flex items-center gap-2"><div class="icon-outlined w-8 h-8 shrink-0"><span class="num-font font-bold text-sm">1</span></div> Foundation</h3>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-1">Objective</strong>
-                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Build the foundational marketing ecosystem and establish LIFED's presence across key digital touchpoints.</p>
+                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Build foundational ecosystem & digital presence.</p>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-2">Focus Areas</strong>
                         <ul class="list-dash-1 mb-5">
                             <li>Brand Positioning</li>
-                            <li>Communication Framework</li>
                             <li>Digital Presence</li>
-                            <li>Marketing Infrastructure</li>
                             <li>Content Foundation</li>
-                            <li>Analytics Setup</li>
+                            <li>Analytics</li>
+                            <li>Comms</li>
+                            <li>Infrastructure</li>
                         </ul>
                         <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                            <strong class="ui-label text-xs text-gray-800 block mb-2">Key Deliverables</strong>
+                            <strong class="ui-label text-xs text-gray-800 block mb-2">Deliverables</strong>
                             <ul class="list-dash-1">
-                                <li>Brand Soft Relaunch</li>
-                                <li>Marketing Asset Library</li>
-                                <li>Website & App Launch</li>
-                                <li>Social Media Soft Relaunch</li>
-                                <li>Analytics & Tracking</li>
-                                <li>Content Calendar</li>
-                                <li>SEO Foundation</li>
-                                <li>Initial PR & Awareness Campaigns</li>
+                                <li>Soft Relaunch</li>
+                                <li>Asset Library</li>
+                                <li>Web/App Launch</li>
+                                <li>Social Relaunch</li>
+                                <li>Tracking</li>
+                                <li>SEO</li>
+                                <li>PR</li>
                             </ul>
                         </div>
                     </div>
@@ -2051,26 +2171,23 @@
                         <div class="absolute top-0 right-0 bg-lifed-mint text-lifed-teal text-xs ui-label px-3 py-1 rounded-bl-xl border-l border-b border-teal-100">Months 3–5</div>
                         <h3 class="text-xl text-gray-900 mb-4 flex items-center gap-2"><div class="icon-outlined w-8 h-8 shrink-0"><span class="num-font font-bold text-sm">2</span></div> Growth</h3>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-1">Objective</strong>
-                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Accelerate audience growth while strengthening platform awareness and Healthmate acquisition.</p>
+                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Accelerate growth, platform awareness & Healthmate acquisition.</p>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-2">Focus Areas</strong>
                         <ul class="list-dash-1 mb-5">
                             <li>Audience Growth</li>
-                            <li>Content Marketing</li>
-                            <li>Search Visibility</li>
-                            <li>Community Marketing</li>
+                            <li>Content/Search Marketing</li>
+                            <li>Community</li>
                             <li>Product Marketing</li>
-                            <li>Healthmate Acquisition</li>
+                            <li>Healthmates</li>
                         </ul>
                         <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                            <strong class="ui-label text-xs text-gray-800 block mb-2">Key Deliverables</strong>
+                            <strong class="ui-label text-xs text-gray-800 block mb-2">Deliverables</strong>
                             <ul class="list-dash-1">
                                 <li>Educational Campaigns</li>
-                                <li>Product Communication</li>
-                                <li>Healthmate Acquisition Campaigns</li>
+                                <li>Healthmate Acquisition</li>
                                 <li>Founder Branding</li>
-                                <li>Webinar Series</li>
-                                <li>Email Marketing</li>
-                                <li>Community Expansion</li>
+                                <li>Webinars</li>
+                                <li>Emails</li>
                             </ul>
                         </div>
                     </div>
@@ -2079,24 +2196,23 @@
                         <div class="absolute top-0 right-0 bg-lifed-mint text-lifed-teal text-xs ui-label px-3 py-1 rounded-bl-xl border-l border-b border-teal-100">Months 6–8</div>
                         <h3 class="text-xl text-gray-900 mb-4 flex items-center gap-2"><div class="icon-outlined w-8 h-8 shrink-0"><span class="num-font font-bold text-sm">3</span></div> Engagement</h3>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-1">Objective</strong>
-                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Strengthen engagement through community building, user participation, and long-form brand storytelling.</p>
+                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Strengthen engagement through community building & storytelling.</p>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-2">Focus Areas</strong>
                         <ul class="list-dash-1 mb-5">
                             <li>Community Building</li>
                             <li>Brand Advocacy</li>
                             <li>User Engagement</li>
                             <li>Customer Experience</li>
-                            <li>Brand Loyalty</li>
+                            <li>Loyalty</li>
                         </ul>
                         <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                            <strong class="ui-label text-xs text-gray-800 block mb-2">Key Deliverables</strong>
+                            <strong class="ui-label text-xs text-gray-800 block mb-2">Deliverables</strong>
                             <ul class="list-dash-1">
                                 <li>Community Programmes</li>
                                 <li>Podcast</li>
                                 <li>Events</li>
-                                <li>Referral Programme</li>
-                                <li>User-generated Content</li>
-                                <li>Healthmate Stories</li>
+                                <li>Referrals</li>
+                                <li>UGC</li>
                                 <li>Corporate Engagement</li>
                             </ul>
                         </div>
@@ -2106,26 +2222,23 @@
                         <div class="absolute top-0 right-0 bg-lifed-mint text-lifed-teal text-xs ui-label px-3 py-1 rounded-bl-xl border-l border-b border-teal-100">Months 9–12</div>
                         <h3 class="text-xl text-gray-900 mb-4 flex items-center gap-2"><div class="icon-outlined w-8 h-8 shrink-0"><span class="num-font font-bold text-sm">4</span></div> Scale</h3>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-1">Objective</strong>
-                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Optimise acquisition channels, improve marketing efficiency, and establish predictable, scalable growth.</p>
+                        <p class="font-body text-sm text-gray-700 mb-4 break-words">Optimise channels and establish predictable, scalable growth.</p>
                         <strong class="ui-label text-xs text-gray-500 uppercase tracking-widest block mb-2">Focus Areas</strong>
                         <ul class="list-dash-1 mb-5">
                             <li>Performance Marketing</li>
-                            <li>Marketing Automation</li>
+                            <li>Automation</li>
                             <li>CRM</li>
-                            <li>Conversion Optimisation</li>
-                            <li>Corporate Growth</li>
-                            <li>Retention Marketing</li>
+                            <li>Conversion Opt.</li>
+                            <li>Corporate</li>
+                            <li>Retention</li>
                         </ul>
                         <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
-                            <strong class="ui-label text-xs text-gray-800 block mb-2">Key Deliverables</strong>
+                            <strong class="ui-label text-xs text-gray-800 block mb-2">Deliverables</strong>
                             <ul class="list-dash-1">
                                 <li>Growth Campaigns</li>
-                                <li>Marketing Automation</li>
                                 <li>Lifecycle Marketing</li>
                                 <li>Corporate Acquisition</li>
-                                <li>Retention Strategy</li>
-                                <li>AI-powered Personalisation</li>
-                                <li>Performance Optimisation</li>
+                                <li>AI Personalisation</li>
                             </ul>
                         </div>
                     </div>
@@ -2133,32 +2246,31 @@
 
                 <div class="card-uniform text-center border-lifed-teal min-w-0">
                     <h3 class="text-xl text-gray-900 mb-6 flex flex-col sm:flex-row justify-center items-center gap-2"><i class="ph-fill ph-arrows-clockwise text-lifed-teal shrink-0"></i> <span class="break-words">Continuous Marketing Operations</span></h3>
-                    <p class="font-body text-sm text-gray-600 mb-6 break-words">These functions operate continuously throughout every phase to ensure consistent brand growth and marketing performance.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
                             <strong class="ui-label text-sm text-lifed-teal block mb-4">Brand Management</strong>
                             <ul class="list-dash-1 text-left">
-                                <li>Brand Governance</li>
+                                <li>Governance</li>
                                 <li>Creative Direction</li>
-                                <li>Campaign Development</li>
-                                <li>Content Production</li>
+                                <li>Campaign Dev</li>
+                                <li>Content</li>
                             </ul>
                         </div>
                         <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
                             <strong class="ui-label text-sm text-lifed-teal block mb-4">Growth Marketing</strong>
                             <ul class="list-dash-1 text-left">
-                                <li>Performance Marketing</li>
+                                <li>Performance</li>
                                 <li>SEO</li>
-                                <li>Community Marketing</li>
-                                <li>Partnership Marketing</li>
+                                <li>Community</li>
+                                <li>Partnerships</li>
                             </ul>
                         </div>
                         <div class="bg-gray-50 rounded-xl p-5 border border-gray-100">
                             <strong class="ui-label text-sm text-lifed-teal block mb-4">Marketing Operations</strong>
                             <ul class="list-dash-1 text-left">
-                                <li>Marketing Analytics</li>
-                                <li>CRM Management</li>
-                                <li>Campaign Optimisation</li>
+                                <li>Analytics</li>
+                                <li>CRM</li>
+                                <li>Campaign Opt</li>
                                 <li>A/B Testing</li>
                                 <li>Reporting</li>
                             </ul>
@@ -2168,8 +2280,8 @@
                             <ul class="list-dash-1 text-left">
                                 <li>Media Relations</li>
                                 <li>Founder Visibility</li>
-                                <li>Industry Partnerships</li>
-                                <li>Brand Reputation</li>
+                                <li>Industry PR</li>
+                                <li>Reputation</li>
                             </ul>
                         </div>
                     </div>
@@ -2177,8 +2289,8 @@
             </section>
 
             <footer class="pt-10 border-t border-gray-200 text-center pb-10">
-                <img class="h-8 w-auto mx-auto mb-3 grayscale opacity-40" src="lifed-koothu-logo.png" alt="LIFED by Koothu Logo" onerror="this.src='https://placehold.co/180x40/ffffff/0db19b?text=LIFED+by+Koothu'">
-                <p class="font-body text-xs text-gray-400">&copy; 2026 LIFED by Koothu. Internal Confidential. | Strategy Date: 4th July 2026</p>
+                <img class="h-8 w-auto mx-auto mb-3 grayscale opacity-40" src="lifed-koothu-logo.png" alt="Lifed Logo" onerror="this.src='https://placehold.co/180x40/ffffff/0db19b?text=Lifed'">
+                <p class="font-body text-xs text-gray-400">&copy; 2026 Koothu. Prepared for Lifed. Internal Confidential. | Strategy Date: 4th July 2026</p>
             </footer>
 
         </div>
